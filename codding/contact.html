@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NBIDC</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style_1.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+
+<body>
+    <section class="sub-header">
+        <nav>
+            <a href="../index.html"><img src="../images/logo.png"></a>
+            <div class="nav-links" id="navLinks">
+                <i class="fa fa-times" onclick="hideMenu()"></i>
+                <ul>
+                    <li><a href="../index.html">HOME</a> </li>
+                    <li><a href="about.html">ABOUT</a> </li>
+                    <li><a href="course.html">COURSE</a> </li>
+                    <li><a href="gallery.html">GALLERY</a> </li>
+                    <li><a href="contact.html">CONTACT</a> </li>
+                </ul>
+            </div>
+            <i class="fa fa-bars" onclick="showMenu()"></i>
+        </nav>
+        <h1>CONTACT US</h1>
+    </section>
+    <!-- -------------CONTACT US---------------- -->
+    <section class="location">
+        <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d971.8362017190618!2d77.66013466949056!3d13.0137008058672!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae1129963c9df3%3A0xa61cc8978b38a3b2!2s128%2C%20Dodda%20Banaswadi%20Main%20Rd%2C%20Vijaya%20Bank%20Colony%2C%20Banaswadi%2C%20Bengaluru%2C%20Karnataka%20560043!5e0!3m2!1sen!2sin!4v1729176438333!5m2!1sen!2sin"
+            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </section>
+    <section class="contact-us">
+        <div class="row">
+            <div class="contact-col">
+                <h2>Contact Info</h2>
+                <div>
+                    <i class="fa fa-home"></i>
+                    <span>
+                        <h5>New Baldwin International Degree College</h5>
+                        <p>Ramamurthynagar Main Road,
+                            7, Dodda Banaswadi Main Rd,
+                            Near Ring Road, Dodda Banaswadi,
+                            Bengaluru, Karnataka</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-phone"></i>
+                    <span>
+                        <h5>080- 25459828</h5>
+                        <p>Bangalore , Karnataka , INDIA</p>
+                    </span>
+                </div>
+                <div>
+                    <i class="fa fa-envelope"></i>
+                    <span>
+                        <h5>principal.nbidc@gmail.com</h5>
+                        <p>Email us your Query</p>
+                    </span>
+                </div>
+
+            </div>
+            <div class="contact-col">
+                <h2>We Would Love To Hear From You!</h2>
+                <p>If you have any questions, please call us or fill in the form below and we will get back to you very
+                    soon.</p>
+                <form action="formhanding.php" method="post">
+                    <input type="text" name="name" placeholder="Enter your name" required>
+                    <input type="text" name="email" placeholder="Enter your email address" required>
+                    <input type="text" name="subject" placeholder="Enter your subject" required>
+                    <textarea rows="8" name="message" placeholder="Message" required></textarea>
+                    <button type="submit" class="hero-btn red-btn">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+
+
+
+
+
+
+    <!-- ----------footer-------- -->
+    <section class="foot">
+        <h4>LITTLE ABOUT US</h4>
+        <P> New Baldwin International Degree college came into existence in the Year 2007 by visionary Dr. T. Venugopal
+            to impart quality education for students. Affiliated to Bangalore North University, it accords undergraduate
+            Program in BCOM, BBA & BCA to equip students with the necessary skills for employment and entrepreneurship.
+        </P>
+        <!-- <a href="" class="hero-btna">Click To know More</a> -->
+        <div class="icons">
+            <i class="fa fa-facebook"></i>
+            <i class="fa fa-instagram"></i>
+            <i class="fa fa-twitter"></i>
+            <i class="fa fa-linkedin"></i>
+        </div>
+        <p>Made by BCA Final Year Batch 6</p>
+    </section>
+
+
+
+
+
+
+
+
+
+
+
+    <!-- ----------javascript for toggle  menu--------- -->
+    <script>
+        var navLinks = document.getElementById("navLinks");
+        function showMenu() {
+            navLinks.style.right = "0";
+        }
+        function hideMenu() {
+            navLinks.style.right = "-300px";
+        }
+    </script>
+</body>
+
+</html>
