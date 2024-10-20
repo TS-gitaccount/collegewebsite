@@ -4,7 +4,7 @@ $visitor_email=$_POST['email'];
 $subject=$_POST['subject'];
 $message=$_POST['message'];
 
- $email_from='{imap.gmail.com:993/imap/ssl}INBOX';  //domain name
+ $email_from=$_POST['email'];  //domain name
 
 $email_subject='New Form Submission';
 
