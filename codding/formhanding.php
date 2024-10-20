@@ -6,7 +6,7 @@ require 'path/to/PHPMailer/src/Exception.php';
 require 'path/to/PHPMailer/src/PHPMailer.php';
 require 'path/to/PHPMailer/src/SMTP.php';
 
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
+if ($_SERVER["REQUEST_METHOD"] == "GET") {
     $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
     $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
     $subject = filter_var(trim($_POST['subject']), FILTER_SANITIZE_STRING);
