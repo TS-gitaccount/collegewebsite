@@ -4,7 +4,7 @@ $visitor_email=$_POST['email'];
 $subject=$_POST['subject'];
 $message=$_POST['message'];
 
- $email_from='https://ts-gitaccount.github.io/collegewebsite/codding/contact.html';  //domain name
+ $email_from='{imap.gmail.com:993/imap/ssl}INBOX';  //domain name
 
 $email_subject='New Form Submission';
 
