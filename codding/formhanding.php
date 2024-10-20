@@ -49,3 +49,56 @@
 // header("location: contact.html")
 // ?> 
 //  -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<?php
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Sanitize the inputs
+    $name = filter_var(trim($_POST['name']), FILTER_SANITIZE_STRING);
+    $email = filter_var(trim($_POST['email']), FILTER_SANITIZE_EMAIL);
+    $subject = filter_var(trim($_POST['subject']), FILTER_SANITIZE_STRING);
+    $message = filter_var(trim($_POST['message']), FILTER_SANITIZE_STRING);
+
+    // Check if required fields are filled
+    if (empty($name) || empty($email) || empty($subject) || empty($message)) {
+        echo "All fields are required!";
+        exit;
+    }
+
+    // Check if email is valid
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        echo "Invalid email format!";
+        exit;
+    }
+
+    // You can either store the form data in a database or send an email.
+    // Here is an example of how to send an email using PHP's mail() function.
+
+    $to = "charu18092005@gmail.com";  // Replace with your email address
+    $headers = "From: $email\r\nReply-To: $email\r\n";
+    $fullMessage = "Name: $name\n\nMessage: $message";
+
+    // Send email
+    if (mail($to, $subject, $fullMessage, $headers)) {
+        echo "Message sent successfully!";
+    } else {
+        echo "Failed to send message!";
+    }
+} else {
+    echo "Invalid request method.";
+}
+?>
