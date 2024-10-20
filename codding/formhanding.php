@@ -1,10 +1,35 @@
 <?php
-$name = $_POST['name'];
-$visitor_email=$_POST['email'];
-$subject=$_POST['subject'];
-$message=$_POST['message'];
+$name = htmlspecialchars($_POST['name']);
+$email=htmlspecialchars($_POST['email']);
+$subject=htmlspecialchars($_POST['subject']);
+$message=htmlspecialchars($_POST['message']);
 
- $email_from=$_POST['email'];  //domain name
+if (!empty($name) && !empty($email) && !empty($subject)&& !empty($message)) {
+        
+        echo "Thank you for your feedback, $name!<br>";
+        echo "Email: $email<br>";
+
+
+  $to = "charu18092005@gmail.com"; // Change this to your email
+        $subject = "New Feedback from $name";
+        $mess = "Name: $name\nEmail: $email\nMessae:\n$message";
+        $headers = "From: $email";
+
+        if (mail($to, $subject, $message, $headers)) {
+            echo "<br>Feedback has been sent via email.";
+        } else {
+            echo "<br>Sorry, there was an issue sending your feedback.";
+        }
+
+    } else {
+        echo "All fields are required.";
+    }
+} else {
+    echo "Invalid Request.";
+}
+?>
+
+<!--  $email_from=$_POST['email'];  //domain name
 
 $email_subject='New Form Submission';
 
@@ -23,3 +48,4 @@ mail($to,$email_subject,$email_body,$headers);
 
 header("location: contact.html")
 ?> 
+ -->
